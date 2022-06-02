@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+.toDoList__hero {
+  margin: 50px 400px;
+  padding: 30px;
+  border: 1px solid grey;
+}
+.toDoList__input {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  color: #3f3e3e;
+  margin-bottom: 20px;
+}
+.add__btn {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  background-color: floralwhite;
+}
+.filter__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+.filter__btn {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: floralwhite;
+}
+.active {
+  background-color: #beea9b;
+}
+.list {
+  width: 100%;
+  margin: 0 auto;
+}
+.toDoLists__list {
+  margin: 20px;
+  text-align: start;
+}
+.toDoLists__list-item {
+  padding: 7px;
+  border: 1px solid grey;
+  display: flex;
+  width: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #2c3e50;
+}
+.delete__btn {
+  border: none;
+  color: red;
+  font-family: 'Cookie', cursive;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: transparent;
+}
