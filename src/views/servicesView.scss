@@ -9,12 +9,14 @@
   color: white;
   border-radius: 5px;
 }
+
 .service__heading {
   font-family: 'Cookie', cursive;
   font-size: 45px;
   font-weight: 600;
   letter-spacing: 2px;
 }
+
 .service__btn {
   display: flex;
   flex-direction: row;
@@ -25,23 +27,27 @@
   border-radius: 3px;
   border: none;
 }
+
 .service__description {
   color: white;
   font-size: 20px;
   font-weight: bold;
 }
+
 .service__line {
   background-color: white;
   padding: 1px;
   border: none;
   width: 100%;
 }
+
 .service__result {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0px 20px;
 }
+
 .active_btn {
   background-color: #599b53;
 }
