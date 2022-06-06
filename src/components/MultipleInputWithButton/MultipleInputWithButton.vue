@@ -10,7 +10,6 @@
   </div>
   <div>
     <input
-      ref="input"
       type="text"
       placeholder="Update description ..."
       v-model="inputDescription"

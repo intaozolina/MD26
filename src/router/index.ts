@@ -5,12 +5,12 @@ import OneInputTasks from "@/components/OneInputTasks/OneInputTasks.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "oneInputTask",
+    name: "OneInputTasks",
     component: OneInputTasks,
   },
   {
     path: "/multiple",
-    name: "multipleInputTask",
+    name: "MultipleInputTasks",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

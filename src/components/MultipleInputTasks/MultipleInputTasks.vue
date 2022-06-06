@@ -12,9 +12,9 @@
   </div>
   <div class="title__box">
     <MultipleInputWithoutButton
-      v-model:title="nextTitle"
+      v-model:nextTitle="nextTitle"
       ,
-      v-model:description="nextDescription"
+      v-model:nextDescription="nextDescription"
     />
     <div>
       <h1 class="title">{{ nextTitle }}</h1>
