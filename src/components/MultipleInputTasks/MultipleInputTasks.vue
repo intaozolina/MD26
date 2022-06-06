@@ -12,14 +12,17 @@
   </div>
   <div class="title__box">
     <MultipleInputWithoutButton
-      v-model:nextTitle="nextTitle"
+      v-model:secondTitle="secondTitle"
       ,
-      v-model:nextDescription="nextDescription"
+      v-model:secondDescription="secondDescription"
     />
     <div>
-      <h1 class="title">{{ nextTitle }}</h1>
-      <p>{{ nextDescription }}</p>
+      <h1 class="title">{{ secondTitle }}</h1>
+      <p>{{ secondDescription }}</p>
     </div>
+  </div>
+  <div>
+    <InputWithToggle :isVisible="isVisible" />
   </div>
 </template>
 
@@ -27,15 +30,21 @@
 import { defineComponent } from "vue";
 import MultipleInputWithoutButton from "@/components/MultipleInputWithoutButton/MultipleInputWithoutButton.vue";
 import MultipleInputWithButton from "@/components/MultipleInputWithButton/MultipleInputWithButton.vue";
+import InputWithToggle from "@/components/InputWithToggle/InputWithToggle.vue";
 
 export default defineComponent({
-  components: { MultipleInputWithoutButton, MultipleInputWithButton },
+  components: {
+    InputWithToggle,
+    MultipleInputWithoutButton,
+    MultipleInputWithButton,
+  },
   name: "MultipleInputTasks",
   data: () => ({
     title: "Title",
     description: "Description",
-    nextTitle: "Title 2",
-    nextDescription: "Description 2",
+    secondTitle: "Title 2",
+    secondDescription: "Description 2",
+    isVisible: false,
   }),
   computed: {},
   methods: {},
