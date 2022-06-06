@@ -20,8 +20,8 @@
     </div>
   </div>
   <div>
-    <InputWithToggle :isVisible="isVisible" @visibilityHandler="" />
-    <div class="box" :style="{ display: isVisible }"></div>
+    <InputWithToggle @visibilityHandler="displayChange" />
+    <div class="box" :style="{ display: boxDisplay }"></div>
   </div>
 </template>
 
@@ -31,8 +31,7 @@ import MultipleInputWithoutButton from "@/components/MultipleInputWithoutButton/
 import MultipleInputWithButton from "@/components/MultipleInputWithButton/MultipleInputWithButton.vue";
 import InputWithToggle from "@/components/InputWithToggle/InputWithToggle.vue";
 
-type Visibility = "flex" | " none";
-
+type BoxDisplay = "flex" | "none";
 export default defineComponent({
   components: {
     InputWithToggle,
@@ -45,9 +44,19 @@ export default defineComponent({
     description: "Description",
     secondTitle: "Title 2",
     secondDescription: "Description 2",
-    isVisible: "flex" as Visibility,
+    isVisible: true,
+    boxDisplay: "flex" as BoxDisplay,
   }),
   computed: {},
-  methods: {},
+  methods: {
+    displayChange() {
+      this.isVisible = !this.isVisible;
+      if (this.isVisible) {
+        this.boxDisplay = "flex";
+      } else {
+        this.boxDisplay = "none";
+      }
+    },
+  },
 });
 </script>
