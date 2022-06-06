@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">To Do List</router-link> |
-    <router-link to="/services">Services</router-link>
+    <router-link to="/">One Input Tasks</router-link> |
+    <router-link to="/multiple">Multiple Input Tasks</router-link>
   </nav>
   <router-view />
 </template>

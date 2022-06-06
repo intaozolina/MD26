@@ -1,0 +1,32 @@
+<template>
+  <div>
+    <input
+      ref="input"
+      type="text"
+      placeholder="Update title ..."
+      :value="title"
+      @input="$emit('update:title', $event.target.value)"
+    />
+    <input
+      ref="input"
+      type="text"
+      placeholder="Update title ..."
+      :value="description"
+      @input="$emit('update:description', $event.target.value)"
+    />
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+
+  name: "MultipleInputWithoutButton",
+  props: ["title", "description"],
+  emits: ["update:title", "update:description"],
+  data: () => ({}),
+  computed: {},
+  methods: {},
+});
+</script>
