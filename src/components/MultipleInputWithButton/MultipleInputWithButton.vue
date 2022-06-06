@@ -6,7 +6,14 @@
       placeholder="Update title ..."
       v-model="inputTitle"
     />
-    <button @click="$emit('update:title', inputTitle)">Change</button>
+    <button
+      @click="
+        $emit('update:title', inputTitle);
+        this.inputTitle = '';
+      "
+    >
+      Change
+    </button>
   </div>
   <div>
     <input
@@ -14,7 +21,12 @@
       placeholder="Update description ..."
       v-model="inputDescription"
     />
-    <button @click="$emit('update:description', inputDescription)">
+    <button
+      @click="
+        $emit('update:description', inputDescription);
+        this.inputDescription = '';
+      "
+    >
       Change
     </button>
   </div>

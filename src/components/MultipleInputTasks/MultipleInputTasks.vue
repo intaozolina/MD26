@@ -2,7 +2,6 @@
   <div class="title__box">
     <MultipleInputWithButton
       v-model:title="title"
-      ,
       v-model:description="description"
     />
     <div>
@@ -13,7 +12,6 @@
   <div class="title__box">
     <MultipleInputWithoutButton
       v-model:secondTitle="secondTitle"
-      ,
       v-model:secondDescription="secondDescription"
     />
     <div>
@@ -22,7 +20,8 @@
     </div>
   </div>
   <div>
-    <InputWithToggle :isVisible="isVisible" />
+    <InputWithToggle :isVisible="isVisible" @visibilityHandler="" />
+    <div class="box" :style="{ display: isVisible }"></div>
   </div>
 </template>
 
@@ -31,6 +30,8 @@ import { defineComponent } from "vue";
 import MultipleInputWithoutButton from "@/components/MultipleInputWithoutButton/MultipleInputWithoutButton.vue";
 import MultipleInputWithButton from "@/components/MultipleInputWithButton/MultipleInputWithButton.vue";
 import InputWithToggle from "@/components/InputWithToggle/InputWithToggle.vue";
+
+type Visibility = "flex" | " none";
 
 export default defineComponent({
   components: {
@@ -44,7 +45,7 @@ export default defineComponent({
     description: "Description",
     secondTitle: "Title 2",
     secondDescription: "Description 2",
-    isVisible: false,
+    isVisible: "flex" as Visibility,
   }),
   computed: {},
   methods: {},
